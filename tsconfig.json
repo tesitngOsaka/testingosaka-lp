@@ -4,7 +4,6 @@
     "strictNullChecks": true,
     "types": ["astro/client"],
     "paths": {
-      "@/*": ["src/*"],
       "@/*": ["./src/*"],
       "~/*": ["./*"]
     }
