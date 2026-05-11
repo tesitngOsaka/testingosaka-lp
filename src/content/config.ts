@@ -18,6 +18,15 @@ const blogCollection = defineCollection({
   }),
 });
 
+const docsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.coerce.date().optional(),
+  }),
+});
+
 const teamCollection = defineCollection({
   schema: ({ image }) => z.object({
     draft: z.boolean(),
@@ -38,4 +47,5 @@ const teamCollection = defineCollection({
 export const collections = {
   'blog': blogCollection,
   'team': teamCollection,
+  'docs': docsCollection,
 };

@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+
+const docsEntries = await getCollection("docs");
+---
+
+<Layout title="ドキュメント">
+  <Container>
+    <h1 class="text-3xl font-bold mt-10 mb-6">ドキュメント</h1>
+    <div class="prose">
+      <p>ここにストック型のドキュメント（ナレッジ、ガイドラインなど）をまとめていきます。</p>
+      <ul class="mt-6 space-y-2">
+        {docsEntries.map((doc) => (
+          <li>
+            <a href={`/docs/${doc.slug}`} class="text-blue-600 hover:underline">{doc.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</Layout>
