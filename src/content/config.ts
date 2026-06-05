@@ -24,6 +24,7 @@ const docsCollection = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     publishDate: z.coerce.date().optional(),
+    order: z.number().optional(),
   }),
 });
 

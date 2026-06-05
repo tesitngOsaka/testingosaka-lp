@@ -2,6 +2,7 @@
 title: "testingOsakaという名前に込めた思い"
 description: "testingOsakaの名前の由来"
 publishDate: 2026-05-10
+order: 2
 ---
 
 ## testingOsaka に込めた思い
