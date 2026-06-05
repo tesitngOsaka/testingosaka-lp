@@ -2,6 +2,7 @@
 title: "testingOsakaの参加規約"
 description: "tesitngOsakaの参加規約です。"
 publishDate: 2026-05-10
+order: 1
 ---
 
 

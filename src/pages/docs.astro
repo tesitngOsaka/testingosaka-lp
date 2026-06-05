@@ -4,6 +4,11 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 
 const docsEntries = await getCollection("docs");
+docsEntries.sort((a, b) => {
+  const orderA = a.data.order ?? 999;
+  const orderB = b.data.order ?? 999;
+  return orderA - orderB;
+});
 ---
 
 <Layout title="ドキュメント">

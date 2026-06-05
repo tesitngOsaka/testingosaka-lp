@@ -2,6 +2,7 @@
 title: "実行委員会の基本理念と規約"
 description: "testingOsaka実行委員会の活動における基本理念、権利、責任について定めたドキュメントです。"
 publishDate: 2026-05-11
+order: 3
 ---
 
 # この文書が定める基本理念
