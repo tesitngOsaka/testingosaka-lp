@@ -10,11 +10,12 @@ export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const siteUrl = Astro.site || Astro.url.origin;
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
 
 const resolvedImageWithDomain = new URL(
   "/testingosakaog.png",
-  Astro.site
+  siteUrl
 ).toString();
 
 const { title } = Astro.props;
@@ -38,8 +39,8 @@ const makeTitle = title
       description="testingOsakaのランディングページ"
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@your_twitter_id", // 実際のTwitterアカウントのIDに変更してください
+        site: "@your_twitter_id",    // 実際のTwitterアカウントのIDに変更してください
         card: "summary_large_image",
       }}
       openGraph={{
