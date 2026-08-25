@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "お試しのブログ"
 snippet: "これはお試しのブログ記事です。"
 image: {
